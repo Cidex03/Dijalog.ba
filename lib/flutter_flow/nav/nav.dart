@@ -5,7 +5,6 @@ import 'package:page_transition/page_transition.dart';
 import '../../index.dart';
 import '../../main.dart';
 import 'serialization_util.dart';
-
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
 
@@ -46,11 +45,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : TaskScreenWidget(),
             ),
             FFRoute(
-              name: 'HomeTask',
-              path: 'homeTask',
+              name: 'CategoriesScreen',
+              path: 'CategoriesScreen',
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'HomeTask')
-                  : CategoriesScreen(),
+                  ? NavBarPage(initialPage: 'CategoriesScreen')
+                  : HomeTaskWidget(),
             ),
             FFRoute(
               name: 'ProfileScreen',

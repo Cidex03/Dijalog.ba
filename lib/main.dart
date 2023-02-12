@@ -1,11 +1,12 @@
-// ignore_for_file: deprecated_member_use
-
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
@@ -54,7 +55,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'us app',
+      title: 'Dijalog.ba',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -82,7 +83,7 @@ class NavBarPage extends StatefulWidget {
   _NavBarPageState createState() => _NavBarPageState();
 }
 
-/// Private State class that goes with NavBarPage.
+/// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
   String _currentPageName = 'HomeScreen';
   late Widget? _currentPage;
@@ -99,7 +100,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomeScreen': HomeScreenWidget(),
       'TaskScreen': TaskScreenWidget(),
-      'Categories': CategoriesScreen(),
+      'CategoriesScreen': HomeTaskWidget(),
       'ProfileScreen': ProfileScreenWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -112,12 +113,9 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPageName = tabs.keys.toList()[i];
         }),
         backgroundColor: Colors.black,
-        // color: Color(0xFF3A424D),
-        color: Colors.white,
-        // activeColor: Color(0xFF5DBEE4),
-        activeColor: Colors.white,
-        tabBackgroundColor: Colors.grey.shade800,
-        // tabBackgroundColor: Color(0x00000000),
+        color: Color(0xFF3A424D),
+        activeColor: Color(0xFF5DBEE4),
+        tabBackgroundColor: Color(0x00000000),
         tabBorderRadius: 100,
         tabMargin: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
         padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
